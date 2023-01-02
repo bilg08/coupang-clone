@@ -13,16 +13,16 @@ function Banner() {
   });
 
   return (
-    <div className="relative flex justify-end items-center h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px] ">
+    <div className="relative flex justify-end items-center h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] ">
       {bannerImages.map(({ backgroundImage }, i) => (
         <img
           className={cn(
             `absolute h-full transition-all object-cover`,
             {
-              "left-0": i === index,
+              "left-0 top-0": i === index,
             },
             {
-              "left-[-2000px]": i !== index,
+              "left-[-3000px]": i !== index,
             }
           )}
           key={backgroundImage}
