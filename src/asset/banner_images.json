@@ -1,0 +1,13 @@
+[
+    {
+        
+        "productName":"China",
+        "backgroundImage":"https://image7.coupangcdn.com/image/ccm/banner/bc0ee5e6a8c5f41fc0f27f4b82848fab.png",
+       "productImage":"https://image6.coupangcdn.com/image/ccm/banner/ab237c6b2dd1f17e8581d15b4d6560fd.jpg"
+    },
+    {
+      "productName": "Russia",
+      "backgroundImage": "https://image10.coupangcdn.com/image/ccm/banner/ec8ba3525e7c635dccddd21608d21f0e.jpg",
+      "productImage": "https://image8.coupangcdn.com/image/ccm/banner/2a71e969976ffc181fc7d924df24984f.png"
+    }
+]
