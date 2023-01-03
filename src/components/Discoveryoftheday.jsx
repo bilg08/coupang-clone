@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import useHover from "../hook/useHover";
 
 
 const discoveriesofthedays = [
@@ -64,13 +65,7 @@ function Discoveriesoftheday() {
 export default Discoveriesoftheday;
 
 function DiscoveryofthedayItem({ image }) {
-  const [hover, setHover] = useState(false);
-  function onMouseOver() {
-    setHover(true);
-  }
-  function onMouseOut() {
-    setHover(false);
-  }
+  const [hover, onMouseOut, onMouseOver] = useHover();
   
   return (
     <div
