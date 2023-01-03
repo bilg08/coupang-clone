@@ -1,10 +1,14 @@
-import {Bars3Icon,UserIcon,ShoppingCartIcon} from '@heroicons/react/24/solid'
+import { UserIcon } from '@heroicons/react/24/solid';
+import {
+  HiOutlineShoppingCart,
+} from "react-icons/hi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import logo from '../asset/logo.png';
 import Search from './Search';
 function Header() {
   return (
     <header className="w-full m-auto">
-      {/*  */}
+      {/* */}
       <div className="bg-[#f0f0f0]">
         <div className="w-full py-1 text-sm m-auto flex justify-between items-center">
           {/* left */}
@@ -23,15 +27,15 @@ function Header() {
         {/*  */}
       </div>
       {/*  */}
-      <div className="mx-auto max-w-[1350px] h-24 flex justify-between">
+      <div className="mx-auto max-w-[1050px] h-28 flex justify-between">
         {/* Right */}
         <div className="flex items-center gap-6">
           <div className="bg-blue-500 flex text-white justify-center items-center flex-col h-full w-24">
-            <Bars3Icon className="h-8" />
+            <GiHamburgerMenu  className='text-4xl'/>
             <p>category</p>
           </div>
           <img
-            className=" w-[140px] h-8 md:w-[171px] md:h-10"
+            className=" w-[100px] h-6 md:w-[160px] md:h-9"
             src={logo}
             alt="logo"
           />
@@ -43,11 +47,11 @@ function Header() {
         {/* Left */}
         <div className="flex justify-end space-x-4 items-center">
           <div className="flex flex-col ">
-            <UserIcon className="h-6" />
+            <UserIcon className="h-8" />
             <p className="text-xs">My Coupang</p>
           </div>
           <div className="flex flex-col">
-            <ShoppingCartIcon className="h-6" />
+            <HiOutlineShoppingCart className="text-3xl" />
             <p className="text-sm">Cart</p>
           </div>
         </div>

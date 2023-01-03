@@ -1,13 +1,13 @@
 import Banner from "../components/Banner";
-import Discoveryoftheday from "../components/Discoveryoftheday";
-import Header from "../components/Header";
-import Layout from "../components/Layout";
+import Discoveriesoftheday from "../components/Discoveryoftheday";
+import SellerDealsoftheDay from "../components/SellerDealsoftheDay";
 
 function Homepage() {
   return (
     <div>
       <Banner />
-      <Discoveryoftheday />
+      <Discoveriesoftheday />
+      <SellerDealsoftheDay />
     </div>
   );
 }
