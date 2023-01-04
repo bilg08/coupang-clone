@@ -1,14 +1,13 @@
 import useHover from "../../hook/useHover";
 import cn from "classnames";
 import Rating from "../Rating";
-
 function ShoppingOfferOfTheDay({ product }) {
   const [hover, onMouseOut, onMouseOver] = useHover();
   return (
     <div
       onMouseOut={onMouseOut}
       onMouseOver={onMouseOver}
-      className={"relative border text-sm min-w-[195px] h-[266px]"}>
+      className={"relative text-sm min-w-[195px] h-[266px]"}>
       <img src={product.image} />
       <Productdiscount discount={product.discountRate} />
       <h1

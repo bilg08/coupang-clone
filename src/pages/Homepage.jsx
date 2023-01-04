@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import CattegoryBest from "../components/CategoryBest";
 import Discoveriesoftheday from "../components/Discoveryoftheday";
 import Products from "../components/Products";
 
@@ -184,6 +185,7 @@ function Homepage() {
           },
         ]}
       />
+      <CattegoryBest />
     </div>
   );
 }
