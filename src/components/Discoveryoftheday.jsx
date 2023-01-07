@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import useHover from "../hook/useHover";
 
@@ -49,7 +49,7 @@ const promotionsofdiscoveriesofthedays = [
 function Discoveriesoftheday() {
   return (
     <div className="max-w-[1050px] m-auto">
-      <h1 className="text-sm">Discovery of the day</h1>
+      <h2 className="text-sm">Discovery of the day</h2>
       <div className="flex w-full gap-5">
         <div className="flex gap-x-2 gap-y-2 p-3 flex-wrap border grid-flow-row max-w-[980px]">
           {discoveriesofthedays.map((image, i) => (
@@ -72,7 +72,7 @@ function DiscoveryofthedayItem({ image }) {
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
       className={`relative  max-w-[48%] hover:border-1 border hover:border-sky-500 `}>
-      <img alt="image" className="object-cover w-full h-full"  src={image.src} />
+      <img className="object-cover w-full h-full"  src={image.src}  alt=""/>
       {!hover ? (
         <div className="h-10 flex items-center justify-center text-4xl absolute bottom-5 left-2  bg-slate-100 w-12">
           <MdKeyboardArrowRight />
@@ -93,6 +93,7 @@ function PromotionsOfDiscoveryOfTheDays() {
     <div className="hidden md:inline-flex flex-col gap-1">
       {promotionsofdiscoveriesofthedays.map((promotion) => (
         <img
+          alt=""
           className="max-w-[100px]"
           key={promotion.url}
           src={promotion.url}

@@ -14,17 +14,17 @@ function Products({ type, productsOfP }) {
     <div className="max-w-[1050px] mx-auto">
       {type === "ShoppingOfferOfTheDay" && (
         <div className="flex gap-2">
-          <img src={shoppingBag} className="h-6" />
-          <h1 className="font-bold text-md md:text-lg">
+          <img src={shoppingBag} className="h-6" alt="" />
+          <h2 className="font-bold text-md md:text-lg">
             <span className="text-red-500">Shoppin Offer</span> of The Day
-          </h1>
+          </h2>
         </div>
       )}
       {type === "SellerDealsoftheDay" && (
-        <h1 className="font-bold text-md md:text-lg">Seller Deal of The Day</h1>
+        <h2 className="font-bold text-md md:text-lg">Seller Deal of The Day</h2>
       )}
       {type === "NeedThisProductNow" && (
-        <h1 className="font-bold text-md md:text-lg">Need This Product Now</h1>
+        <h2 className="font-bold text-md md:text-lg">Need This Product Now</h2>
       )}
       <div className="flex gap-2">
         <ShowProducts type={type} products={productsOfP} />

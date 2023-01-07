@@ -23,13 +23,13 @@ function SellerDealsoftheDay({ product }) {
           {product.discountRate}% off now
         </p>
       </div>
-      <h1
+      <h2
         className={cn("truncate", {
           "underline decoration-[1.5px] decoration-blue-500": hover,
         })}>
         {product.name}
-      </h1>
-      <h1 className="font-bold text-red-500">{product.price} won</h1>
+      </h2>
+      <h2 className="font-bold text-red-500">{product.price} won</h2>
       {product.freeshipping && <p>FREE Shipping</p>}
       <div className="flex items-center mb-1">
         <Rating rating={product.rating} />
