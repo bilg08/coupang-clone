@@ -16,7 +16,7 @@ function Products({ type, productsOfP }) {
         <div className="flex gap-2">
           <img src={shoppingBag} className="h-6" alt="" />
           <h2 className="font-bold text-md md:text-lg">
-            <span className="text-red-500">Shoppin Offer</span> of The Day
+            <span className="text-red-500">Өдрийн</span> Хямдрал
           </h2>
         </div>
       )}

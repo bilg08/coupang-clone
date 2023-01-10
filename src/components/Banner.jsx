@@ -13,11 +13,11 @@ function Banner() {
   });
 
   return (
-    <div className="relative flex justify-end items-center h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] ">
+    <div className="relative flex justify-end items-center h-[300px] max-sm:h-[50vw] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] ">
       {bannerImages.map(({ backgroundImage }, i) => (
         <img
           className={cn(
-            `absolute h-full transition-all object-cover`,
+            `absolute h-full transition-all object-contain`,
             {
               "left-0 top-0": i === index,
             },
@@ -29,8 +29,10 @@ function Banner() {
           src={backgroundImage}
           alt={backgroundImage}
         />
-      ))}
-      <div className="duration-150  absolute ">
+        // <div className="bg-fixed" style={{backgroundImage:url}}></div>
+      ))
+      } 
+      <div className="duration-150 max-sm:w-1/4 absolute ">
         {bannerImages.map(({ productName, productImage }, i) => (
           <div
             key={productName}

@@ -49,7 +49,7 @@ const promotionsofdiscoveriesofthedays = [
 function Discoveriesoftheday() {
   return (
     <div className="max-w-[1050px] m-auto">
-      <h2 className="text-sm">Discovery of the day</h2>
+      <h2 className="text-sm ml-2">Өнөөдрийн онцлох</h2>
       <div className="flex w-full gap-5">
         <div className="flex gap-x-2 gap-y-2 p-3 flex-wrap border grid-flow-row max-w-[980px]">
           {discoveriesofthedays.map((image, i) => (
