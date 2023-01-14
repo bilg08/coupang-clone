@@ -8,7 +8,11 @@ module.exports = {
       'xxs':'0.26rem',
       'ms':'0.7rem',
       'placeholder':'0.37rem',
-      'placeholderIcon':'0.6rem'
+      'placeholderIcon':'0.6rem',
+      'footer':'0.4rem'
+    },
+    container: {
+      padding: '1rem',
     },
     // screenSize:{
     //   // 'galaxy':'@media (min-width: 420px) { ... }',
@@ -17,6 +21,6 @@ module.exports = {
 
   },
   plugins: [
-    require('tailwind-scrollbar-hide')
+    require('tailwind-scrollbar-hide',"daisyui")
   ],
 };

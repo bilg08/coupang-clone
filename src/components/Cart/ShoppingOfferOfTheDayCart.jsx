@@ -7,7 +7,7 @@ function ShoppingOfferOfTheDay({ product }) {
     <div
       onMouseOut={onMouseOut}
       onMouseOver={onMouseOver}
-      className={"relative text-sm min-w-[195px] h-[266px]"}>
+      className={"relative text-sm min-w-[195px] h-fit"}>
       <img src={product.image} alt=""/>
       <Productdiscount discount={product.discountRate} />
       <h2

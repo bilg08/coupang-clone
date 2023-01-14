@@ -9,7 +9,7 @@ function SellerDealsoftheDay({ product }) {
     <div
       onMouseOut={onMouseOut}
       onMouseOver={onMouseOver}
-      className={"relative border text-sm min-w-[195px] h-[266px]"}>
+      className={"relative border-none text-sm min-w-[195px] h-fit"}>
       <img
         alt=""
         className="w-[160px] h-[160px]"
@@ -25,9 +25,9 @@ function SellerDealsoftheDay({ product }) {
       </div>
       <h2
         className={cn("truncate", {
-          "underline decoration-[1.5px] decoration-blue-500": hover,
+          "underline decoration-[1.5px] decoration-blue-500 ": hover,
         })}>
-        {product.name}
+        {product.name.split(',')[0]}
       </h2>
       <h2 className="font-bold text-red-500">{product.price} won</h2>
       {product.freeshipping && <p>FREE Shipping</p>}

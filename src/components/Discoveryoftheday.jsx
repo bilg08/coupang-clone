@@ -4,31 +4,31 @@ import useHover from "../hook/useHover";
 
 
 const discoveriesofthedays = [
-  {
+  {type:'wide',
     src: "https://static.coupangcdn.com/ta/cmg_paperboy/image/1672022529183/C2-B1.jpg",
   },
-  {
+  {type:'wide',
     src: "https://static.coupangcdn.com/ta/cmg_paperboy/image/1672022529183/C2-B1.jpg",
   },
-  {
+  {type:'narrow',
     src: "https://static.coupangcdn.com/la/cmg_paperboy/image/1671769704993/C2-B4.jpg",
   },
-  {
+  {type:'narrow',
     src: "https://static.coupangcdn.com/la/cmg_paperboy/image/1671769704993/C2-B4.jpg",
   },
-  {
+  {type:'narrow',
     src: "https://static.coupangcdn.com/la/cmg_paperboy/image/1671769704993/C2-B4.jpg",
   },
-  {
+  {type:'narrow',
     src: "https://static.coupangcdn.com/la/cmg_paperboy/image/1671769704993/C2-B4.jpg",
   },
-  {
+  {type:'narrow',
     src: "https://static.coupangcdn.com/ia/cmg_paperboy/image/1671769728754/C2-B7.jpg",
   },
-  {
+  {type:'narrow',
     src: "https://static.coupangcdn.com/la/cmg_paperboy/image/1671769704993/C2-B4.jpg",
   },
-  {
+  {type:'narrow',
     src: "https://static.coupangcdn.com/la/cmg_paperboy/image/1671769704993/C2-B4.jpg",
   },
 ];
@@ -49,7 +49,7 @@ const promotionsofdiscoveriesofthedays = [
 function Discoveriesoftheday() {
   return (
     <div className="max-w-[1050px] m-auto">
-      <h2 className="text-sm ml-2">Өнөөдрийн онцлох</h2>
+      <h2 className="max-sm:text-[20px] text:xs ml-2">Өнөөдрийн онцлох</h2>
       <div className="flex w-full gap-5">
         <div className="flex gap-x-2 gap-y-2 p-3 flex-wrap border grid-flow-row max-w-[980px]">
           {discoveriesofthedays.map((image, i) => (
@@ -68,18 +68,35 @@ function DiscoveryofthedayItem({ image }) {
   const [hover, onMouseOut, onMouseOver] = useHover();
   
   return (
-    <div
+    image.type === 'wide'? <div
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
       className={`relative  max-w-[48%] hover:border-1 border hover:border-sky-500 `}>
       <img className="object-cover w-full h-full"  src={image.src}  alt=""/>
       {!hover ? (
-        <div className="h-10 flex items-center justify-center text-4xl absolute bottom-5 left-2  bg-slate-100 w-12">
+        <div className="h-10 max-sm:text-xs max-sm:h-5 max-sm:w-5 max-sm:text-xs flex items-center justify-center text-4xl absolute bottom-5 left-2  bg-slate-100 w-12">
           <MdKeyboardArrowRight />
         </div>
       ) : (
-        <div className="h-10 flex text-white bg-blue-500 items-center justify-center  p-2 absolute bottom-5 left-2 ">
-          <p className="text-[12px]">바로가기</p>
+        <div className="h-10 max-sm:text-xs max-sm:h-5 max-sm:w-14 max-sm:text-xs flex text-white bg-blue-500 items-center justify-center  p-2 absolute bottom-5 left-2 ">
+          <p className="text-[12px] max-sm:text-footer">바로가기</p>
+          <div className="text-2xl">
+            <MdKeyboardArrowRight/>
+          </div>
+        </div>
+      )}
+    </div>:<div
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+      className={`relative max-w-[23.5%] max-sm:max-w-[23%] hover:border-1 border hover:border-sky-500 `}>
+      <img className="object-cover w-full h-full"  src={image.src}  alt=""/>
+      {!hover ? (
+        <div className="h-10 flex items-center justify-center max-sm:text-xs max-sm:h-5 max-sm:w-5 max-sm:text-xs text-4xl absolute bottom-5 left-2  bg-slate-100 w-12">
+          <MdKeyboardArrowRight />
+        </div>
+      ) : (
+        <div className="h-10 flex text-white bg-blue-500 items-center justify-center max-sm:text-xs max-sm:h-5 max-sm:w-14 max-sm:text-xs p-2 absolute bottom-5 left-2 ">
+          <p className="text-[12px] max-sm:text-footer">바로가기</p>
           <div className="text-2xl">
             <MdKeyboardArrowRight/>
           </div>

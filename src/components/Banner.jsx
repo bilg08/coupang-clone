@@ -17,7 +17,7 @@ function Banner() {
       {bannerImages.map(({ backgroundImage }, i) => (
         <img
           className={cn(
-            `absolute h-full transition-all object-contain`,
+            `absolute h-full transition-all object-cover`,
             {
               "left-0 top-0": i === index,
             },

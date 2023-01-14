@@ -13,31 +13,31 @@ const hotKeyWords = [
 
 function CategoryBest({ category }) {
   function generateCategoryColor() {
-    if (category.name === "food") return 'text-yellow-500'
-    else if (category.name === "card") return "text-red-500"
-    else if (category.name === 'clothes') return 'text-green-500'
+    if (category.name === "Food") return 'text-yellow-500'
+    else if (category.name === "Card") return "text-red-500"
+    else if (category.name === 'Clothes') return 'text-green-500'
     else return 'text-sky-500'
   }
   const textColor = generateCategoryColor(category.name)
   return (
     <nav id={category.name}>
-      <div className="flex gap-10 max-w-[1050px] mx-auto grid-cols-2 md:grid-cols-3">
-        {/* left */}
-        <div className={`${textColor}`}>
+      <div className={`flex gap-10 max-sm:gap-2 max-w-[1050px] mx-auto grid-cols-2 md:grid-cols-3 border-t-2 border-t-${textColor}`} >
+        {/* left */} 
+        <div className={`${textColor} w-[16vw] flex-row justify-between h-fit` }>
           <div>
-            <h1 className={` text-2xl font-bold`}>{category.name}</h1>
-            <div className="flex gap-1 items-center">
-              <h2>Go to</h2>
+            <div className='text-[50px] max-sm:text-[20px] font-bold'>{category.name}</div>
+            <div className="flex gap-1 mt-[-7px] items-center">
+              <div className="max-sm:text-footer text-xs">Дэлгэрэнгүй</div>
               <MdKeyboardArrowRight />
             </div>
           </div>
 
-          <div>
-            <h2>Hot KeyWord</h2>
-            <div className="flex flex-col gap-2">
+          <div className="mt-24">
+            <div className="max-sm:text-[0.5rem] text-sm">Тренд түлхүүр үг</div>
+            <div className="flex max-sm:gap-1 max-sm:mt-2 mt-3 gap-2 flex-wrap">
               {category.hotKeyWords.map((hotKeyWord) => (
                 <div
-                  className="border  pl-1 text-xs py-2 w-[86px]"
+                  className="border  pl-1 text-[0.6rem] py-1 w-[86px] max-sm:text-[0.4rem] max-sm:w-fit max-sm:px-1 max-sm:py-0.5"
                   key={hotKeyWord}>
                   {hotKeyWord}
                 </div>
@@ -48,10 +48,17 @@ function CategoryBest({ category }) {
         {/* Center */}
         <CategoryBestSlider />
         {/* Right */}
-        <div className="flex md:w-[550px] flex-grow gap-2 overflow-y-scroll scrollbar-hide">
+        <div className="flex-col w-[30vw]">
+        <div className="flex w-1/2 md:w-[550px] flex-grow gap-2 gap-x-6 overflow-x-scroll scrollbar-hide">
           {category.products.map((product,i) => (
             <CategoryCart key={product.name + i} product={product} />
           ))}
+        </div>
+        <div className="flex w-1/2 md:w-[550px] flex-grow gap-2 overflow-x-scroll scrollbar-hide">
+          {category.products.map((product,i) => (
+            <CategoryCart key={product.name + i} product={product} />
+          ))}
+        </div>
         </div>
       </div>
     </nav>
@@ -61,32 +68,32 @@ function CategoryBests() {
   const products = [
     {
       img: "https://thumbnail7.coupangcdn.com/thumbnails/remote/160x160ex/image/vendor_inventory/f13a/c2d823633071b57d800a35a06e1f35987dff3d217b0f491bbaa17187c77c.png",
-      name: "Pantomona Women's Optimal Combination Complex Ingredient Biotin Pantothenic Acid Collagen Hyaluronic Acid Pomegranate Nutritional Supplement, 3 Boxes (135 Days Supply)",
+      name: "Pantomona Women's Optimal Combination Complex ",
       price: 15900,
     },
     {
       img: "https://thumbnail10.coupangcdn.com/thumbnails/remote/160x160ex/image/vendor_inventory/f50c/c6e5ba844ba0e94effd5033d87c7d781d77250e4b5d122b5642538a54f2c.png",
-      name: "Pantomona Women's Optimal Combination Complex Ingredient Biotin Pantothenic Acid Collagen Hyaluronic ",
+      name: "Pantomona Women's  Acid Collagen Hyaluronic ",
       price: 15200,
     },
     {
       img: "https://thumbnail7.coupangcdn.com/thumbnails/remote/160x160ex/image/vendor_inventory/f13a/c2d823633071b57d800a35a06e1f35987dff3d217b0f491bbaa17187c77c.png",
-      name: "Pantomona Women's Optimal Combination Complex Ingredient Biotin Pantothenic Acid Collagen Hyaluronic Acid Pomegranate Nutritional Supplement, 3 Boxes (135 Days Supply)",
+      name: "Pantomona Women's Optimal Combination Complex ",
       price: 15900,
     },
     {
       img: "https://thumbnail10.coupangcdn.com/thumbnails/remote/160x160ex/image/vendor_inventory/f50c/c6e5ba844ba0e94effd5033d87c7d781d77250e4b5d122b5642538a54f2c.png",
-      name: "Pantomona Women's Optimal Combination Complex Ingredient Biotin Pantothenic Acid Collagen Hyaluronic ",
+      name: "Pantomona Women's  Acid Collagen Hyaluronic ",
       price: 15200,
     },
     {
       img: "https://thumbnail7.coupangcdn.com/thumbnails/remote/160x160ex/image/vendor_inventory/f13a/c2d823633071b57d800a35a06e1f35987dff3d217b0f491bbaa17187c77c.png",
-      name: "Pantomona Women's Optimal Combination Complex Ingredient Biotin Pantothenic Acid Collagen Hyaluronic Acid Pomegranate Nutritional Supplement, 3 Boxes (135 Days Supply)",
+      name: "Pantomona Women's Optimal Combination Complex",
       price: 15900,
     },
     {
       img: "https://thumbnail10.coupangcdn.com/thumbnails/remote/160x160ex/image/vendor_inventory/f50c/c6e5ba844ba0e94effd5033d87c7d781d77250e4b5d122b5642538a54f2c.png",
-      name: "Pantomona Women's Optimal Combination Complex Ingredient Biotin Pantothenic Acid Collagen Hyaluronic ",
+      name: "Pantomona Women's Acid Collagen Hyaluronic ",
       price: 15200,
     }
   ];
@@ -104,34 +111,37 @@ function CategoryBests() {
   ];
   const categories = [
     {
-      name: "food",
+      name: "Food",
       products,
       sliderItems,
       hotKeyWords,
     },
     {
-      name: "clothes",
+      name: "Clothes",
       products,
       sliderItems,
       hotKeyWords,
     },
     {
-      name: "car",
+      name: "Car",
       products,
       sliderItems,
       hotKeyWords,
     },
   ];
   return (
-    <div className="flex mt-4 flex-col gap-5">
-      <Tocs />
-      {categories.map((category) => (
-        <CategoryBest
-          key={category.name}
-          category={category}
-        />
-      ))}
+    <div className="max-w-[1050px] mx-auto items-center">
+      <div className="flex mt-4 flex-col gap-5">
+        {/* <Tocs /> */}
+        {categories.map((category) => (
+          <CategoryBest
+            key={category.name}
+            category={category}
+          />
+        ))}
+      </div>
     </div>
+
   );
 }
 
@@ -163,7 +173,7 @@ function CategoryBestSlider() {
   });
 
   return (
-    <div className="relative hidden md:flex justify-end items-center sm:w-[200px] sm:h-[350px] min-w-[200px] h-full w-auto  md:h-[500px] md:w-[300px] ">
+    <div className="relative  flex justify-end items-center max-sm:w-[3vw] max-sm:h-[280px] w-64 h-contain ">
       <Slides>
         {data.map((image, i) => (
           <Slide
@@ -198,7 +208,7 @@ function Slide({ image, title, detail, isCurrent }) {
   return (
     <div className={cn(checkIsCurrent(isCurrent),'absolute top-0 left-0 w-full h-[350px] md:w-full md:h-full')}>
       <img
-        className={`absolute top-0 left-0 min-w-[245px]  h-auto md:h-full w-full transition-all object-cover`}
+        className={`absolute top-0 left-0 max-sm:w-[3vw]  h-auto md:h-full w-full transition-all object-cover`}
         key={image}
         src={image}
         alt={image}
@@ -237,10 +247,10 @@ function Indicator({ images, currentIndex, setCurrenIndex }) {
 
 function CategoryCart({product}) {
   return (
-    <div className="w-[160px]">
+    <div className="w-[50vw] h-[12vw] max-sm:w-[75px]">
       <img src={product.img} alt="" />
-      <h2 className="text-xs truncate">{product.name}</h2>
-      <p><span className="font-bold">{product.price}</span> won</p>
+      <div className='text-footer'>{product.name}</div>
+      <p><span className="font-bold">{product.price}</span>₩</p>
     </div>
   );
 }

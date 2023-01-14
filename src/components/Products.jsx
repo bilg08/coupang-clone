@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import ShoppingOfferOfTheDay from "./Cart/ShoppingOfferOfTheDayCart";
 import SellerDealsoftheDay from "./Cart/SellerDealsOfTheDay";
 import NeedThisProductNow from "./Cart/NeedThisProductNow";
@@ -15,18 +16,18 @@ function Products({ type, productsOfP }) {
       {type === "ShoppingOfferOfTheDay" && (
         <div className="flex gap-2">
           <img src={shoppingBag} className="h-6" alt="" />
-          <h2 className="font-bold text-md md:text-lg">
+          <h2 className="font-bold text-md md:text-lg max-sm:ml-1 my-2">
             <span className="text-red-500">Өдрийн</span> Хямдрал
           </h2>
         </div>
       )}
       {type === "SellerDealsoftheDay" && (
-        <h2 className="font-bold text-md md:text-lg">Seller Deal of The Day</h2>
+        <h2 className="font-bold text-md md:text-lg max-sm:ml-8 my-2">Seller Deal of The Day</h2>
       )}
       {type === "NeedThisProductNow" && (
-        <h2 className="font-bold text-md md:text-lg">Need This Product Now</h2>
+        <h2 className="font-bold text-md md:text-lg max-sm:ml-8 my-2">Need This Product Now</h2>
       )}
-      <div className="flex gap-2">
+      <div className="flex gap-2 max-h-max max-w-[980px]">
         <ShowProducts type={type} products={productsOfP} />
       </div>
     </div>
@@ -39,10 +40,11 @@ function ShowProducts({ products, type }) {
   const SpecificProducts = components[type];
   return (
     <div
-      className="flex 
-     gap-2 scrollbar-hide overflow-y-scroll">
+      className="flex gap-2 scrollbar-hide overflow-scroll h-fit max-sm:ml-10">
       {products.map((product,i) => (
-        <SpecificProducts key={product.name + i} product={product} />
+        <Link to={`/product/${i}`}>
+          <SpecificProducts key={product.name + i} product={product} />
+        </Link>
       ))}
     </div>
   );

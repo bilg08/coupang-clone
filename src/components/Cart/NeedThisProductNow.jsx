@@ -8,7 +8,7 @@ function NeedThisProductNow({product}) {
     <div
       onMouseOut={onMouseOut}
       onMouseOver={onMouseOver}
-      className={"relative border text-sm min-w-[195px] h-[266px]"}>
+      className={"relative border-none text-sm min-w-[195px] h-fit"}>
       <img
         alt=""
         className="w-[160px] h-[160px]"

@@ -4,7 +4,7 @@ import Discoveriesoftheday from "../components/Discoveryoftheday";
 import Products from "../components/Products";
 function Homepage() {
   return (
-    <div>
+    <div className="mb-48">
       <Banner />
       <Discoveriesoftheday />
       <Products
