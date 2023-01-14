@@ -14,7 +14,7 @@ function ShoppingOfferOfTheDay({ product }) {
         className={cn("truncate", {
           "underline decoration-[1.5px] decoration-blue-500": hover,
         })}>
-        {product.name}
+        {product.name.split(',')[0]}
       </h2>
       {product.freeshipping && <p>FREE Shipping</p>}
       <div className="flex items-center mb-1">

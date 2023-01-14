@@ -76,10 +76,10 @@ return(
             <div>{prod[id].freeshipping ? <div className="text-footer">ҮНЭГҮЙ хүргэлттэй</div> : <div className="text-footer font-bold">Төлбөртэй хүргэлттэй</div>}</div>
             <div className="flex justify-between my-3">
                 <div className="flex h-6">
-                    <input type="number" class="outline-none focus:outline-none text-center w-[23%] px-0.5 border border-gray-600 font-semibold text-md hover:text-black max-sm:w-[3.5vw] max-sm:placeholder:text-placeholder max-sm:text-[2.2vw] focus:text-black  md:text-basecursor-default flex items-center text-gray-700 " name="custom-input-number" placeholder={count}></input>
-                    <div className="flex-col h-6">
-                        <button onClick={(e)=>setCount(count+1)} className="h-[50%] max-sm:text-footer">+</button>
-                        <button onClick={(e)=>setCount(count-1)} className="h-[50%] max-sm:text-footer">-</button>
+                    <input type="number" class="outline-none focus:outline-none text-center w-[23%] px-0.5 border-y border-l border-gray-600 font-semibold text-md hover:text-black max-sm:w-[3.5vw] max-sm:placeholder:text-placeholder max-sm:text-[2.2vw] focus:text-black  md:text-basecursor-default flex items-center text-gray-700 " name="custom-input-number" placeholder={count}></input>
+                    <div className=" flex flex-col border-y border-gray-500 border-r">
+                        <button onClick={(e)=>setCount(count+1)} className="h-fit max-sm:text-[2vw] max-sm:mt-[-1px] mt-[-6px]">+</button>
+                        <button onClick={(e)=>setCount(count-1)} className="h-fit max-sm:text-[2vw] max-sm:mt-[-1px] mt-[-12px]">-</button>
                     </div>
                 </div>
                 <button className="w-1/2 mx-1 max-sm:text-footer text-white bg-blue-500 border">САГСАНД ХИЙХ</button>

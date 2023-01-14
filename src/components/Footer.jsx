@@ -1,6 +1,6 @@
 export const Footer = ()=>{
     return (
-        <footer className="w-full h-fit bottom-0 fixed bg-white mt-24 ">
+        <footer className="w-full h-fit bg-white mt-24 ">
             <div className="w-[100vw] px-1 flex-row justify-evenly">
               <a className="border-gray-400 border-r px-1 text-xs max-sm:text-[0.3rem]" href="https://news.coupang.com/" >회사소개</a>
               <a className="border-gray-400 border-r px-1 text-xs max-sm:text-[0.3rem]" href="https://ir.aboutcoupang.com/English/home/" >Investor Relations</a>

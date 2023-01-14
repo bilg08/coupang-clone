@@ -21,7 +21,7 @@ function CategoryBest({ category }) {
   const textColor = generateCategoryColor(category.name)
   return (
     <nav id={category.name}>
-      <div className={`flex gap-10 max-sm:gap-2 max-w-[1050px] mx-auto grid-cols-2 md:grid-cols-3 border-t-2 border-t-${textColor}`} >
+      <div className={`flex gap-10 max-sm:gap-2 max-w-[990px] ml-0 mx-auto grid-cols-2 md:grid-cols-3 border-t-2 border-t-${textColor}`} >
         {/* left */} 
         <div className={`${textColor} w-[16vw] flex-row justify-between h-fit` }>
           <div>
@@ -48,13 +48,13 @@ function CategoryBest({ category }) {
         {/* Center */}
         <CategoryBestSlider />
         {/* Right */}
-        <div className="flex-col w-[30vw]">
-        <div className="flex w-1/2 md:w-[550px] flex-grow gap-2 gap-x-6 overflow-x-scroll scrollbar-hide">
+        <div className="flex-col gap-2 w-[300px] mt-3">
+        <div className="flex gap-2 scrollbar-hide overflow-scroll h-fit max-sm:ml-10 my-2">
           {category.products.map((product,i) => (
             <CategoryCart key={product.name + i} product={product} />
           ))}
         </div>
-        <div className="flex w-1/2 md:w-[550px] flex-grow gap-2 overflow-x-scroll scrollbar-hide">
+        <div className="flex gap-2 scrollbar-hide overflow-scroll h-fit max-sm:ml-10 my-2">
           {category.products.map((product,i) => (
             <CategoryCart key={product.name + i} product={product} />
           ))}
@@ -173,7 +173,7 @@ function CategoryBestSlider() {
   });
 
   return (
-    <div className="relative  flex justify-end items-center max-sm:w-[3vw] max-sm:h-[280px] w-64 h-contain ">
+    <div className="relative max-sm:hidden flex justify-end items-center w-[30vw] h-contain bg-green-500">
       <Slides>
         {data.map((image, i) => (
           <Slide
@@ -191,7 +191,7 @@ function CategoryBestSlider() {
 }
 function Slides({children}) {
   return (
-    <div className="absolute hidden md:block top-0 left-0 w-full h-full">{children}</div>
+    <div className="absolute hidden max-sm:block md:block top-0 left-0 w-full h-full">{children}</div>
   )
 }
 function Slide({ image, title, detail, isCurrent }) {
@@ -208,7 +208,7 @@ function Slide({ image, title, detail, isCurrent }) {
   return (
     <div className={cn(checkIsCurrent(isCurrent),'absolute top-0 left-0 w-full h-[350px] md:w-full md:h-full')}>
       <img
-        className={`absolute top-0 left-0 max-sm:w-[3vw]  h-auto md:h-full w-full transition-all object-cover`}
+        className={`absolute top-0 left-0 max-sm:h-full  h-auto md:h-full w-full transition-all object-cover`}
         key={image}
         src={image}
         alt={image}
@@ -230,7 +230,7 @@ function Indicator({ images, currentIndex, setCurrenIndex }) {
     setCurrenIndex(index)
   }
   return (
-    <div className="absolute hidden md:flex  h-5  top-2 md:bottom-0 w-full  gap-2">
+    <div className="absolute hidden max-sm:flex md:flex  h-5  top-2 md:bottom-0 w-full  gap-2">
       {images.map((_image, i) => (
         <div key={i} onClick={()=>click(i)} className=" bg-slate-400 relative w-4 h-4 rounded-full">
           <div
@@ -247,10 +247,10 @@ function Indicator({ images, currentIndex, setCurrenIndex }) {
 
 function CategoryCart({product}) {
   return (
-    <div className="w-[50vw] h-[12vw] max-sm:w-[75px]">
+    <div className="w-[50vw] h-[12vw] max-sm:w-[70px] max-sm:h-fit">
       <img src={product.img} alt="" />
-      <div className='text-footer'>{product.name}</div>
-      <p><span className="font-bold">{product.price}</span>₩</p>
+      <div className='max-sm:text-footer text-xs'>{product.name}</div>
+      <p><span className="font-bold max-sm:text-footer">{product.price}</span>₩</p>
     </div>
   );
 }

@@ -10,7 +10,7 @@ const components = {
   NeedThisProductNow,
 };
 
-function Products({ type, productsOfP }) {
+function  Products({ type, productsOfP }) {
   return (
     <div className="max-w-[1050px] mx-auto">
       {type === "ShoppingOfferOfTheDay" && (
